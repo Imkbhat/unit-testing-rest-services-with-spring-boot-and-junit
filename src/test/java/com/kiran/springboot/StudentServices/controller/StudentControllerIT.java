@@ -40,7 +40,7 @@ public class StudentControllerIT {
 				createURLWithPort("/students/Student1/courses/Course1"),
 				HttpMethod.GET, entity, String.class);
 
-		String expected = "{id:Course1,name:Spring,description:10 Steps}";
+		String expected = "{\"id\":\"Course1\",\"name\":\"Spring\",\"description\":\"Learning Spring\"}";
 
 		JSONAssert.assertEquals(expected, response.getBody(), false);
 	}
